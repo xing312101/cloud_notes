@@ -1,0 +1,24 @@
+{
+  "name": "cloud_notes",
+  "version": "1.0.0",
+  "description": "xing312101 cloud note using gitbook",
+  "keywords": [
+    "gitbook",
+    "notes"
+  ],
+  "author": "xing312101",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xing312101/cloud_notes/issues"
+  },
+  "homepage": "https://github.com/xing312101/cloud_notes#readme",
+  "dependencies": {
+    "gitbook": "^2.6.9",
+    "gitbook-cli": "^2.3.2"
+  },
+  "scripts": {
+    "gitbook-build": "gitbook build",
+    "gitbook-version": "gitbook --version"
+
+  }
+}

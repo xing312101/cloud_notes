@@ -6,17 +6,23 @@ orbs:
 # Orchestrate or schedule a set of jobs
 jobs:
   build:
+    #machine: true
     executor:
       name: node/default
       tag: '12.18.2'
     steps:
+      #- run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+      #- run: nvm install 12.18.2
+      #- run: npm install npm@latest -g
       - checkout
       - run: npm install
       - run: node -v
       #- run: npm run test
-      #- run: npm update gitbook-cli
-      - run: npm install gitbook-cli
-      - run: gitbook --version
-      - run: gitbook build
-      - run: gitbook serve
+      #- run: npm i gitbook-cli 
+      - run: npm run-script gitbook-build
+      - run: npm run-script gitbook-version
+      #- run: npm update gitbook-cli -g
+      #- run: gitbook --version
+      #- run: gitbook build
+      #- run: gitbook serve
 
