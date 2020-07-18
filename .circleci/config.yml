@@ -17,12 +17,42 @@ jobs:
       - checkout
       - run: npm install
       - run: node -v
-      #- run: npm run test
-      #- run: npm i gitbook-cli 
-      - run: npm run-script gitbook-build
       - run: npm run-script gitbook-version
-      #- run: npm update gitbook-cli -g
-      #- run: gitbook --version
-      #- run: gitbook build
-      #- run: gitbook serve
-
+      - run: npm run-script gitbook-build
+  deploy:
+#    machine:
+#      enabled: true
+    executor:
+      name: node/default
+      tag: '12.18.2'
+    steps:
+      - setup_remote_docker
+      - run: sudo apt update
+      - run: sudo apt install rsync
+      - checkout
+      - run: npm install
+      - run: node -v
+      - run: npm run-script gitbook-version
+      - run: npm run-script gitbook-build
+      - run: ls ./_book
+      - run: ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
+      - add_ssh_keys:
+          fingerprints:
+            - "cf:81:28:f9:39:fd:66:b0:a1:0a:e8:60:bd:64:e6:3c"
+      - run:
+          name: "Prepare enviroment"
+          command: |
+            ssh $SSH_USER@$SSH_HOST "date >> deploy_times"
+            ssh $SSH_USER@$SSH_HOST "sudo mkdir /var/www/notes_gitbook; sudo chmod 777 /var/www/notes_gitbook "
+      #- run: scp -r ./_book/* $SSH_USER@$SSH_HOST:/var/www/notes_gitbook/
+      - run: rsync -cvzr ./_book/ $SSH_USER@$SSH_HOST:/var/www/notes_gitbook/ --exclude-from='.bookignore' --delete
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          filters:
+            branches:
+              only: 
+                - master

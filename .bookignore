@@ -1,0 +1,13 @@
+# gitbook ignore
+.bookignore
+
+.circleci
+
+.gitignore
+
+deploy.sh
+
+package-lock.json
+
+package.json
+
