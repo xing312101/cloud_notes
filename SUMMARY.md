@@ -81,4 +81,8 @@
        * [find](linux/find_and_exec.md)
 * [CSS](css/README.md)
 * [Database SQL](database_sql/README.md)
+* [MySQL](mysql/README.md)
+   * [backup data](mysql/backup_data.md)
+* [Oracle](oracle/README.md)
+   * [Oracle Client](oracle/oracle_client.md)
 
