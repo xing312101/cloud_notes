@@ -31,6 +31,34 @@ git config --global --list
 git config --global --unset-all user
 ```
 
+## Rename branch
+> ref : https://multiplestates.wordpress.com/2015/02/05/rename-a-local-and-remote-branch-in-git/
+
+```
+1. Rename your local branch.
+git branch -m new-name
+or
+git branch -m old-name new-name
+
+2. Delete the old-name remote branch and push the new-name local branch.
+git push origin :old-name new-name
+
+3. Reset the upstream branch for the new-name local branch.
+git push origin -u new-name
+
+```
+
+## fork git
+```
+method 1. change remote
+https://help.github.com/en/articles/changing-a-remotes-url
+
+method 2. new git
+1. git clone or copy directory
+2. rm -rf .git
+3. git init
+```
+
 ## Commands
 ```
 ### git clone
