@@ -7,6 +7,7 @@
    * [Plugins](nodejs/plugins.md)
        * [Express](nodejs/express.md)
        * [Dotenv](nodejs/dotenv.md)
+       * [total.js](nodejs/totaljs.md)
 * [Vue.js](vuejs/README.md)
    * [Basic](vuejs/basic.md)
 * [AWS](aws/README.md)
@@ -98,4 +99,9 @@
    * [Commands](windows/commands.md)
 * [development tools](development_tools/README.md)
 * [Bootstrap](bootstrap/README.md)
+* [React](react/README.md)
+* [Go Lang](go_lang/README.md)
+* [QT](qt/README.md)
+* [English](english/README.md)
+* [Waiting Research](waiting_research/README.md)
 
