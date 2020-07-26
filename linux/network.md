@@ -1,0 +1,5 @@
+# network
+```
+ifconfig
+netstat -an
+```
