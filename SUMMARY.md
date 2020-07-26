@@ -79,4 +79,6 @@
    * [log rotated](linux/log_rotated.md)
    * [Command Skill](linux/command_skill.md)
        * [find](linux/find_and_exec.md)
+* [CSS](css/README.md)
+* [Database SQL](database_sql/README.md)
 
