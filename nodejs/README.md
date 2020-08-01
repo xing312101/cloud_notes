@@ -1,6 +1,6 @@
 # Node.Js
-## Setup Environments
-### NVM
+
+## NVM
 > reference: https://github.com/creationix/nvm
 
 <br />
@@ -50,7 +50,7 @@ $ npm config set prefix $NVM_DIR/versions/node/v9.8.0
 ```
 <br />
 
-### Node.js
+## Node.js
 #### Command
 ```
 # 現在使用node版本
@@ -59,7 +59,7 @@ $ node -v
 $ node
 ```
 
-### NPM
+## NPM
 > reference: https://docs.npmjs.com/
 
 <br />
@@ -87,8 +87,31 @@ $ npm ls -g
 $ npm ls
 ```
 
+## NPX
+> reference: https://medium.com/itsems-frontend/whats-npx-e83400efe7f8
+
+跟 NPM 的差異在於執行完後會移除不需要的安裝模組，且直接create project
+
+```
+$ npx create-react-app@version my-react-app
+```
+
+可以直接執行套件或Github檔案，請參閱reference
 
 
+
+## change registry
+> 切換 package 的下載來源
+
+```
+$ npm config get registry
+> https://registry.npmjs.org/
+
+$ npm config set registry https://you.wanted.source.url
+$ npm config get registry
+> https://you.wanted.source.url
+
+```
 
 
 
