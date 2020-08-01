@@ -92,6 +92,16 @@
 
 ## ngrok
 
+## 待分類內容
+```
+ eval $(ssh-agent -s)
+
+ ssh-add ~/.ssh/id_rsa
+```
+
+
+
+```
 
 
 
