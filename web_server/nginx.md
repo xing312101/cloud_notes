@@ -72,3 +72,21 @@ server {
 	}
 }
 ```
+
+## sockjs-node proxy
+> reference: https://stackoverflow.com/questions/40516288/webpack-dev-server-with-nginx-proxy-pass
+```
+location /sockjs-node {
+    proxy_set_header X-Real-IP  $remote_addr;
+    proxy_set_header X-Forwarded-For $remote_addr;
+    proxy_set_header Host $host;
+
+    proxy_pass http://node:8080;
+
+    proxy_redirect off;
+
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+}
+```
