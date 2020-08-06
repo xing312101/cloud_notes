@@ -115,4 +115,5 @@
 * [English](english/README.md)
 * [Waiting Research](waiting_research/README.md)
 * [Gitbook](gitbook/README.md)
+   * [plugins](gitbook/plugins.md)
 
