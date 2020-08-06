@@ -15,6 +15,7 @@
    * [Unorganized](react/unorganized.md)
    * [Static html](react/static_html.md)
    * [React.js](react/reactjs.md)
+       * [Main Concepts](react/main_concepts.md)
 * [AWS](aws/README.md)
    * [S3](aws/s3.md)
 * [Ruby on Rails](ruby_on_rails/README.md)
