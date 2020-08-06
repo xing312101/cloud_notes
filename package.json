@@ -14,11 +14,11 @@
   "homepage": "https://github.com/xing312101/cloud_notes#readme",
   "dependencies": {
     "gitbook": "^2.6.9",
-    "gitbook-cli": "^2.3.2"
+    "gitbook-cli": "^2.3.2",
+    "gitbook-plugin-search-plus-mod": "^1.0.6"
   },
   "scripts": {
     "gitbook-build": "gitbook build",
     "gitbook-version": "gitbook --version"
-
   }
 }
