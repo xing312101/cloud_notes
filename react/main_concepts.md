@@ -743,7 +743,104 @@ function NumberList(props) {
 ```
 
 # Forms
+> https://reactjs.org/docs/forms.html
 
+### Controlled Components
+```
+class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {name: '', description: '', age: 0};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({[event.target.name]: event.target.value});
+  }
+
+  handleSubmit(event) {
+    console.log('name:' + this.state.name);
+    console.log('description:' + this.state.description);
+    console.log('age:' + this.state.age);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
+        </label>
+        <br />
+        <label>
+          Description:
+          <textarea name="description" value={this.state.description} onChange={this.handleChange} />
+        </label>
+        <br />
+        <label>
+          Age:
+          <select name="age" value={this.state.age} onChange={this.handleChange}>
+            <option value="10">Ten years</option>
+            <option value="20">Twenty years</option>
+            <option value="30">Thirty years</option>
+            <option value="40">Forty years</option>
+          </select>
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    )
+  };
+}
+
+ReactDOM.render(<NameForm />, document.getElementById('root'));
+```
+
+##### Note:
+You can pass an array into the value attribute, allowing you to select multiple options in a select tag:
+```
+<select multiple={true} value={['B', 'C']}>
+```
+
+### The file input Tag
+> https://reactjs.org/docs/uncontrolled-components.html#the-file-input-tag
+
+```
+<input type="file" />
+```
+
+### Handling Multiple Inputs
+```
+// ES6
+this.setState({
+  [name]: value
+});
+
+// ES5
+var partialState = {};
+partialState[name] = value;
+this.setState(partialState);
+```
+
+### Controlled Input Null Value
+```
+ReactDOM.render(<input value="hi" />, mountNode);
+
+setTimeout(function() {
+  ReactDOM.render(<input value={null} />, mountNode);
+}, 1000);
+```
+
+### Alternatives to Controlled Components
+> https://reactjs.org/docs/uncontrolled-components.html
+
+### Fully-Fledged Solutions
+> https://jaredpalmer.com/formik
+
+# Lifting State Up
+> https://reactjs.org/docs/lifting-state-up.html
 
 
 
