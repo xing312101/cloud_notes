@@ -842,7 +842,115 @@ setTimeout(function() {
 # Lifting State Up
 > https://reactjs.org/docs/lifting-state-up.html
 
+簡單講就是children的值交由parent去處理
+```
+const scaleNames = {
+  c: 'Celsius',
+  f: 'Fahrenheit'
+}
 
+function BoilingVerdict(props) {
+  if (props.celsius >= 100) {
+    return <p>The wather would boil.</p>
+  }
+  return <p>The water would not boil.</p>
+}
+
+function toCelsius(fahrenheit) {
+  return (fahrenheit -32) * 5 / 9;
+}
+
+function toFahrenheit(celsius) {
+  return (celsius * 9 / 5) + 32;
+}
+
+function tryToConvert(temperature, convert) {
+  const input = parseFloat(temperature);
+
+  if (Number.isNaN(input)) {
+    return '';
+  }
+
+  const output = convert(input);
+  const rounded = Math.round(output * 1000) / 1000;
+  return rounded.toString();
+
+}
+
+class TemperatureInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    // this.state = {
+    //   scale: props.scale,
+    //   temperature: props.temperature
+    // }
+
+    // console.log("props", props.scale, props.temperature);
+    // console.log("state", this.state.scale, this.state.temperature);
+  }
+
+  handleChange(e) {
+    // this.setState({[e.target.name]: e.target.value});
+    this.props.onTemperatureChange(e.target.value);
+  }
+
+  render() {
+    // const temperature = this.state.temperature;
+
+    const temperature = this.props.temperature;
+    const scale = this.props.scale;
+
+    return (
+      <fieldset>
+        <legend>Enter temperature in {scaleNames[scale]}:</legend>
+        <input
+          // name='temperature'
+          value={temperature}
+          onChange={this.handleChange}
+        />
+      </fieldset>
+    );
+  }
+}
+
+class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      temperature: 0,
+      scale: 'c'
+    }
+
+    this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
+    this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
+  }
+
+  handleCelsiusChange(temperature) {
+    this.setState({scale: 'c', temperature});
+  }
+
+  handleFahrenheitChange(temperature) {
+    this.setState({scale: 'f', temperature});
+  }
+
+  render() {
+    const scale = this.state.scale;
+    const temperature = this.state.temperature;
+    const celsius = scale === 'f' ? tryToConvert(temperature, toCelsius) : temperature;
+    const fahrenheit = scale === 'c' ? tryToConvert(temperature, toFahrenheit) : temperature;
+
+    return (
+      <div>
+        <TemperatureInput scale='c' temperature={celsius} onTemperatureChange={this.handleCelsiusChange} />
+        <TemperatureInput scale='f' temperature={fahrenheit} onTemperatureChange={this.handleFahrenheitChange} />
+        <BoilingVerdict celsius={parseFloat(celsius)} />
+      </div>
+    );
+  }
+}
+
+```
 
 
 
