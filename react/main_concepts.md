@@ -3,6 +3,8 @@
 
 > Using create-react-app to initial project
 
+> https://react.xing312101.nctu.me
+
 # Hello World
 > https://reactjs.org/docs/hello-world.html
 
@@ -1070,3 +1072,18 @@ class SignUpDialog extends React.Component {
   }
 }
 ```
+
+# Thinking in React
+> https://reactjs.org/docs/thinking-in-react.html
+
+> 可以當練習題
+
+1. 拆解UI
+2. 不要全部都用 state 處理資料
+3. React 是 one-way data flow
+4. 思考要用 Props 或 State ，主要看component UI的目的是在controller還是view
+5. 思考應該有哪些state
+6. 思考那些state是活動的
+7. 資料要可逆，不要改寫原資料
+
+

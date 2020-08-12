@@ -19,6 +19,7 @@ jobs:
       - run: node -v
       - run: npm run-script gitbook-version
       - run: npm run-script gitbook-build
+      - run: ls ./_book
   deploy:
 #    machine:
 #      enabled: true
