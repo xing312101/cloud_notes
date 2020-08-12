@@ -3,7 +3,9 @@
 
 > Using create-react-app to initial project
 
-> https://react.xing312101.nctu.me
+### github: https://github.com/xing312101/hello_react
+
+### Demo: https://react.xing312101.nctu.me
 
 # Hello World
 > https://reactjs.org/docs/hello-world.html
