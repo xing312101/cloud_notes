@@ -1,5 +1,9 @@
 {
 	"styles": {
 		"website": "css/gitbook.css"
-	}
+	},
+	"plugins": [
+		"-lunr", "-search", "search-plus-mod",
+		"chapter-fold"
+	]
 }
