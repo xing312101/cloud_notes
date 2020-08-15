@@ -20,3 +20,10 @@ https://code.visualstudio.com/
 
 ### QT
 https://www.qt.io/
+
+## debug tool
+```
+LD_TRACE_LOADED_OBJECTS=1
+
+gdb
+```

@@ -25,3 +25,28 @@ grep "^\[2015\/11\/07" development.log > tmp.log
 ```
 
 ## curl
+
+
+## date with timezone
+```
+TZ=America/New_York date
+```
+
+## sudo without password
+```
+sudo echo 'yuxing ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/90-cloud-init-users
+```
+
+## resize partition
+```
+resize /block_name
+fuser -k /block_name
+umount /block_name
+resize2fs -f /dev/storage_block_name
+mount /block_name
+mount -o remount,rw /block_name
+```
+
+## killall
+
+

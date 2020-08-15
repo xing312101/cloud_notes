@@ -49,11 +49,17 @@ git push origin -u new-name
 ```
 
 ## fork git
-```
 method 1. change remote
-https://help.github.com/en/articles/changing-a-remotes-url
+> https://help.github.com/en/articles/changing-a-remotes-url
 
+```
+git clone origin.git arcadenet-admin-tool
+git remote -v
+git remote set-url origin new_url.git
+git remote -v
+```
 method 2. new git
+```
 1. git clone or copy directory
 2. rm -rf .git
 3. git init

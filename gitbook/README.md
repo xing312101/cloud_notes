@@ -1,4 +1,7 @@
 # Gitbook
+## editor
+> https://github.com/GitbookIO/editor-legacy/releases
+
 ## install
 ```
 $ sudo npm install gitbook-cli -g
