@@ -17,6 +17,11 @@ http://www.aptana.com/
 
 ### visual studio code
 https://code.visualstudio.com/
+```
+remove space when saving
+files.trimTrailingWhitespace
+```
+
 
 ### QT
 https://www.qt.io/
