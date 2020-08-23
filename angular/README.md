@@ -51,10 +51,6 @@ npm install @angular/cdk@7
 > https://medium.com/@spencerfeng/setup-a-proxy-for-api-calls-for-your-angular-cli-app-6566c02a8c4d
 
 
-## change master key
-> https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336
-
-
 ## interceptor
 > https://wellwind.idv.tw/blog/2017/10/29/angular-advanced-handle-http-request-with-interceptor/
 

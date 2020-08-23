@@ -82,3 +82,5 @@ bundle exec rake assets:precompile
 ```
 
 
+## change master key
+> https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336
