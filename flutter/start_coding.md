@@ -7,6 +7,9 @@
 
 > https://flutter.dev/docs/cookbook
 
+## Use an external package
+> find open-source package at https://pub.dev
+
 ## flutter entry point
 Path: lib/main.dart
 
@@ -27,6 +30,27 @@ StatefulWidget
 // set state sample
 setState(() { _myState = newValue; })
 ```
+
+## Add a Stateful Widget
+在Android Studio可以輸入stful來自動產生statefulWidget相關的class。
+
+會有兩個class，一個是繼承StatefulWidget，一個是繼承State<自訂義的StatefulWidget>的class
+
+state的class name會依照statefulWidget的class name作相對應的name，eg:
+```
+class Hello extends StatefulWidget {
+    @override
+    _HelloState createState() => _HelloState();
+}
+
+class _HelloState extend State<Hello> {
+    @override
+    Widget build(BuildContext context){
+        return Container();
+    }
+}
+```
+
 
 ## setState
 > https://api.flutter.dev/flutter/widgets/State/setState.html
@@ -118,9 +142,6 @@ setState(() { _myState = newValue; })
 * TextField
 
 
-
-
-
 ## Drawer
 UserAccountsDrawerHeader
 
@@ -133,4 +154,3 @@ UserAccountsDrawerHeader
 * Scaffold
 * AppBar
 * Text
-

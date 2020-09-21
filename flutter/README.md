@@ -17,6 +17,9 @@ FVM 是將 ~/flutter 設定link到想要的version上，所以多個project不�
 
 IDE設定flutter path設定在 ~/flutter 上即可
 
+## Flutter's build modes
+> https://flutter.dev/docs/testing/build-modes
+
 ## flutter commands
 
 #### check dependencies
@@ -27,9 +30,10 @@ $ flutter doctor
 #### build web version
 > https://flutter.dev/docs/get-started/web
 
+目前beta所以官方建議是用新的version
 ```
-$ flutter channel beta ????
-$ flutter upgrade ????
+$ flutter channel beta // 切換beta
+$ flutter upgrade // 取得新的version
 $ flutter config --enable-web
 ```
 
