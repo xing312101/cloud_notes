@@ -103,6 +103,7 @@
    * [backup data](mysql/backup_data.md)
 * [Oracle](oracle/README.md)
    * [Oracle Client](oracle/oracle_client.md)
+* [Power BI](power_bi/README.md)
 * [Web Server](web_server/README.md)
    * [SSL](web_server/ssl.md)
        * [let's Encrypt](web_server/lets_encrypt.md)

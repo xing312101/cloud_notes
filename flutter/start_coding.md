@@ -5,8 +5,7 @@
 
 > hello_flutter: https://github.com/xing312101/hello_flutter
 
->
-https://flutter.dev/docs/cookbook
+> https://flutter.dev/docs/cookbook
 
 ## flutter entry point
 Path: lib/main.dart
