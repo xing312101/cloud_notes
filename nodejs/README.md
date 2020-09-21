@@ -33,6 +33,8 @@ $ nvm list
 $ nvm install node #直接最新版的
 $ nvm install stable #直接最新版的
 $ nvm install <版本號>
+$ npm install --verbose # --verbose will show more states
+$ npm cache clean --force
 # 切換版本
 $ nvm use <版本號>
 # 設定default nodeJS版本
