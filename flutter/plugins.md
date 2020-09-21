@@ -41,4 +41,22 @@ child: Text(wordPair.asPascalCase);
 > https://pub.dev/packages/simple_animations
 
 
+# crypto
+> https://pub.dev/packages/crypto
+
+crypto library is the main heart of our app. It holds the HMAC algorithm.
+
+# path_provider
+> https://pub.dev/packages/path_provider
+
+path_provider will help use to write a file in external storage.
+
+# simple_permissions
+> https://pub.dev/packages/simple_permissions
+
+simple_permissions will help to deal with the runtime permissions.
+
+
+
+
 
