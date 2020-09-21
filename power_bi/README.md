@@ -4,6 +4,30 @@
 ## Comparing Power BI Report Server and the Power BI service
 > https://docs.microsoft.com/en-us/power-bi/report-server/compare-report-server-service
 
+## Embed
+> https://docs.microsoft.com/zh-tw/power-bi/report-server/quickstart-embed
+
+URL帶入參數: rs:embed=true
+```
+https://myserver/reports/powerbi/Sales?rs:embed=true
+
+// with password
+https://username:Password@myserver/reports/powerbi/Sales?rs:embed=true
+
+<iframe width="800" height="600" src="https://myserver/reports/powerbi/Sales?rs:embed=true" frameborder="0" allowFullScreen="true"></iframe>
+```
+
+#### Tags
+```
+<iframe>
+
+<object data="https://myserver/reports/powerbi/Sales?rs:embed=true"></object>
+
+<embed src="http://win-hauseq7hanj:82/Reports/powerbi/bb?rs:embed=true" />
+
+```
+
+
 ## Download for using Microsoft Cloud service
 ** Power BI Desktop **
 > https://powerbi.microsoft.com/zh-tw/desktop/

@@ -57,6 +57,3 @@ path_provider will help use to write a file in external storage.
 simple_permissions will help to deal with the runtime permissions.
 
 
-
-
-
