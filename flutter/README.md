@@ -3,6 +3,8 @@
 
 > https://flutter.dev
 
+> https://book.flutterchina.club
+
 ## Notice
 install dart first
 
