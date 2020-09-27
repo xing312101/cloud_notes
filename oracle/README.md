@@ -1,4 +1,18 @@
 # Oracle
+> https://www.oracle.com
+
+## Download Oracle Database
+https://www.oracle.com/tw/database/technologies/oracle-database-software-downloads.html
+
+## Download ODAC (Oracle.dataAccess.Client)
+https://www.oracle.com/database/technologies/dotnet-odacdev-downloads.html
+
+## Download Oracle Client
+https://www.oracle.com/tw/database/technologies/instant-client/winx64-64-downloads.html
+- Client version 11.2.0.3 or 11.2.0.4 at least
+
+
+
 ## Drop table
 ```
 DROP TABLE "DATABASE"."TABLE_NAME" CASCADE CONSTRAINTS PURGE;

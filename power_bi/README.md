@@ -1,6 +1,17 @@
 # Power BI
 > https://powerbi.microsoft.com
 
+## Download Oracle Client from Power BI dependence
+https://docs.microsoft.com/zh-tw/power-bi/connect-data/desktop-connect-oracle-database
+
+#### 32-bit:
+https://www.oracle.com/database/technologies/dotnet-utilsoft-downloads.html
+
+#### 64-bit
+https://www.oracle.com/database/technologies/odac-downloads.html
+
+
+
 ## Comparing Power BI Report Server and the Power BI service
 > https://docs.microsoft.com/en-us/power-bi/report-server/compare-report-server-service
 
