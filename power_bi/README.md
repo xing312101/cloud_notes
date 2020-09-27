@@ -54,3 +54,55 @@ https://username:Password@myserver/reports/powerbi/Sales?rs:embed=true
 
 4, SSMS - DB management Tool (option)
 > https://docs.microsoft.com/zh-tw/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15
+
+
+## Switch Import-data to directQuery
+> https://xxlbi.com/blog/switching-from-imported-data-to-directquery-or-live-connection-in-power-bi/
+
+## Go to detail when click a bar in chart
+> https://docs.microsoft.com/en-us/power-bi/create-reports/desktop-see-data-see-records
+
+## DAX
+> https://medium.com/mastertalks-tw/%E4%BD%BF%E7%94%A8-power-bi-%E4%B8%80%E5%AE%9A%E8%A6%81%E6%87%82%E5%BE%97-dax-%E5%87%BD%E6%95%B8-%E7%9C%8B%E5%AE%8C%E9%80%99%E7%AF%87%E7%AB%8B%E5%8D%B3%E4%B8%8A%E6%89%8B-1206283eed6f
+
+
+## Like VLOOKUP in power bi
+### 1, RELATED
+> https://community.powerbi.com/t5/Community-Blog/Good-Ol-VLOOKUP-The-Ultimate-Guide-to-Lookups-in-Power-BI/ba-p/35912
+
+### 2, LOOKUPVALUE
+> https://docs.microsoft.com/en-us/dax/lookupvalue-function-dax
+
+> https://exceltown.com/en/tutorials/power-bi/powerbi-com-and-power-bi-desktop/dax-query-language-for-power-bi-and-power-pivot/lookupvalue-assigning-of-values-from-other-table-dax-power-pivot-power-bi/
+
+```
+LOOKUPVALUE(
+    <result_columnName>,
+    <search_columnName>,
+    <search_value>
+    [, <search2_columnName>, <search2_value>]…
+    [, <alternateResult>]
+)
+```
+
+```
+[Region] = LOOKUPVALUE(Employee[Region], Employee[Email], USERNAME(), BLANK())
+
+Product = LOOKUPVALUE('Product'[Product], Sales[ProductKey], 'Product'[ProductKey])
+
+Product = RELATED('Product'[Product])
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
