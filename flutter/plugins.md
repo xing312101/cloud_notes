@@ -32,11 +32,6 @@ child: Text(wordPair.asPascalCase);
 
 ```
 
-
-# flutter_secure_storage
-> https://pub.dev/packages/flutter_secure_storage
-
-
 # simple_animations
 > https://pub.dev/packages/simple_animations
 
@@ -55,5 +50,10 @@ path_provider will help use to write a file in external storage.
 > https://pub.dev/packages/simple_permissions
 
 simple_permissions will help to deal with the runtime permissions.
+
+
+
+
+
 
 

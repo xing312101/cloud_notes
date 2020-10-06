@@ -16,6 +16,8 @@
    * [Start Coding](flutter/start_coding.md)
    * [Router](flutter/router.md)
    * [Plugins](flutter/plugins.md)
+       * [Provider](flutter/provider.md)
+       * [flutter_secure_storage](flutter/flutter_secure_storage.md)
 * [React](react/README.md)
    * [Static html](react/static_html.md)
    * [React.js](react/reactjs.md)
