@@ -32,3 +32,6 @@ LD_TRACE_LOADED_OBJECTS=1
 
 gdb
 ```
+
+### Android Studio
+
