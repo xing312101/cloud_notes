@@ -27,6 +27,7 @@
        * [Hooks](react/hooks.md)
        * [Tutorial](react/tutorial.md)
 * [React-Native](react-native/README.md)
+* [Raspberry Pi](raspberry_pi/README.md)
 * [AWS](aws/README.md)
    * [S3](aws/s3.md)
 * [Ruby on Rails](ruby_on_rails/README.md)
