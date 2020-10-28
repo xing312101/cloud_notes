@@ -94,8 +94,40 @@ Product = RELATED('Product'[Product])
 ```
 
 
+## 3, ROLLING 12 MONTH
+> DEFAULT VALUE ALSO USING CALCULATE
+
+```
+VALUE_1 =
+CALCULATE (
+    SUMX (
+        TableName,
+        TableName[Column Name]
+    )
+)
+
+ROLLING_12_MONTH =
+CALCULATE(
+    [VALUE_1],
+    FILTER (
+        ALL(Dates),
+        AND (
+            Dates[Date] <= MAX( Dates[Date] ),
+            DATEADD (
+                Dates[Date],
+                1,
+                YEAR
+            )  > MAX ( Dates[Date] )
+        )
+    )
+)
+```
+
+## 4, CONVERT IMPORT MODE TO DIRECT QUERY
+> https://datacaffee.com/convert-import-mode-to-direct-query-in-power-bi/
 
 
+## 5, Dynamic Top N
 
 
 
