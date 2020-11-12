@@ -5,6 +5,8 @@
 
 > for replacing inheritedWidget
 
+> Flutter Provider: FutureProvider StreamProvider
+
 ## in pubspec.yml
 ```
 dependencies:
@@ -30,6 +32,9 @@ class ProviderName with ChangeNotifier {
 ## get value
     final p = Provider.of<ProviderName>(context);
     debugPrint("p value: " + p.val.toString());
+
+    // listen: false will not rebuild widget UI, it can save the resource.
+    Provider.of<MyCountChangeNotifier>(context, listen: false)
 
 ## set value
     Provider.of<ProviderName>(context).updateVal(val.text);
