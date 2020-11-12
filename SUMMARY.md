@@ -130,4 +130,5 @@
 * [Gitbook](gitbook/README.md)
    * [plugins](gitbook/plugins.md)
 * [Redux](redux/README.md)
+* [Maximo](maximo/README.md)
 
