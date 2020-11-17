@@ -128,13 +128,129 @@ CALCULATE(
 
 
 ## 5, Dynamic Top N
+```
+THE_TOP_VALUES =
+VAR SELECTED_TOP = SELECTEDVALUE('TOP_VALUES'[TOP_VALUE])
+RETURN
+SWITCH(TRUE(),
+    SELECTED_TOP = 0, [MEANSURE_VALUE],
+    RANKX (
+            ALLSELECTED(  'TABLES'[COLUMN_NAME] ),
+            [MEANSURE_VALUE]
+                )
+                  <= SELECTED_TOP,
+        [MEANSURE_VALUE]
+)
+```
+
+## 6. Convert import mode to direct query mode
+1. Create empty file and setup tables in direct query mode. This file named 'A'.
+2. Copy the import mode file and named 'B'.
+3. Change extend name of A and B to '.zip'.
+4. Remove DataMashup and DataModel files in B. And then copy DataMashup and DataModel from A to B.
+5. rename extend name of B to '.pbix'
+6. Open B.pbix and rebuild meansures and loss somethings.
+
+## 7. Rank top
+```
+meansure =
+VAR RankResult = RANKX(ALL(table_name), [value], , desc)
+return
+IF(RankResult < 10, table_name[column_name], "other")
+```
+
+## 8. Using Drill Through Buttons to Replace Right-Click Navigation
+> https://blog.pragmaticworks.com/using-drill-through-buttons-to-replace-right-click-navigation-in-power-bi
+
+```
+StringForDemoButton = If(SELECTEDVALUE(DimKey[CorporateGroup], 0) == 0, “See Demo Details”, “See customer loss details for ” & SELECTEDVALUE(Dimkey[CorporateGroup]))
+
+Button text is function and set value as StringForDemoButton
+
+Button Action:
+
+Type: Drill through (Preview or not)
+
+Destination: Customer Losses (your column)
+
+Enabled tooltip Go to Customer Losses……
+```
+
+## 9. dynamic table value
+> https://www.nathanprats.com/4-different-ways-to-dynamically-change-tables-rows-in-power-bi/
+
+```
+UNION group date:
+
+Tool -SlicerTable =
+	VAR ProductCategory =
+		CROSSJOIN(
+			ROW(“Type”, “ProductCategoy)”,
+			VALUES ( DimProductCategory[EnglishProducts'])
+		)
+	VAR ProductsSubCategory =
+		CROSSJOIN(
+			ROW(“Type”, “ProductSubCategoy)”,
+			VALUES ( DimProductSubCategory[EnglishProductSubcategoryName])
+		)
+	VAR SalesTerritoryGroup =
+		CROSSJOIN(
+			ROW(“Type”, “SalesTerritoryGroup)”,
+			VALUES ( DimSalesTerritory[SalesTerritoryGroup])
+		)
+	VAR ProductsSubCategory =
+		CROSSJOIN(
+			ROW(“Type”, “SalesTerritoryRegion)”,
+			VALUES ( DimSalesTerritory[SalesTerritoryRegion])
+		)
+	VAR ProductsSubCategory =
+		CROSSJOIN(
+			ROW(“Type”, “SalesTerritoryCountry)”,
+			VALUES ( DimSalesTerritory[SalesTerritoryCountry])
+		)
+
+RETURN
+	UNION (
+		ProductCategory,
+		ProductSubCategory,
+		SalesTerritoryGroup,
+		SalesTerritoryRegion,
+		SalesTerritoryCountry
+	)
 
 
+Measure:
+SumSalesAmount (Dynamic Slicer) =
+
+IF (
+	HASCONEVALUE ( ’Tool - SlicerTable’[Type] ),
+	SWITCH (
+		VALUES ( ’Tool - SlicerTable’[Type]),
+
+		“ProductCategory”, CALCULATE (
+			[SumSalesAmount],
+			TREATAS ( VALUES ( ’Tool - SlicerTable’[Values] ), DimProductCategory[EnglishProductCategoryName] )
+		),
+		“ProductSubCategory”, CALCULATE (
+			[SumSalesAmount],
+			TREATAS ( VALUES ( ’Tool - SlicerTable’[Values] ), DimProductCategory[EnglishProductSubcategoryName] )
+		),
+		“SalesTerritoryGroup”, CALCULATE (
+			[SumSalesAmount],
+			TREATAS ( VALUES ( ’Tool - SlicerTable’[Values] ), DimSalesTerritory[SalesTerritoryGroup] )
+		),
+		“SalesTerritoryRegion”, CALCULATE (
+			[SumSaleAmount],
+			TREATAS ( VALUES ( ’Tool - SlicerTable’[Values] ), DimSalesTerritory[SalesTerritoryRegion] )
+		),
+		“SalesTerritoryCountry”, CALCULATE (
+			[SumSalesAmount],
+			TREATAS ( VALUES ( ’Tool -SlicerTable’[Values] ), DimSalesTerritory[SalesTerritoryCountry] )
+		)
+	)
+)
 
 
-
-
-
-
+```
 
 
