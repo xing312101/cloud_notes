@@ -1,4 +1,10 @@
 # Linux
+
+## virtualbox shared folder permission
+```
+sudo usermod -aG vboxsf $USER
+```
+
 ## version
 ```
 lsb_release -a

@@ -39,3 +39,8 @@ class ProviderName with ChangeNotifier {
 ## set value
     Provider.of<ProviderName>(context).updateVal(val.text);
 ```
+
+## Consumer Widget
+> 局部監聽, 避免整個Widget都重新render
+
+
