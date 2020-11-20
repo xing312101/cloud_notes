@@ -19,6 +19,7 @@
        * [Provider](flutter/provider.md)
        * [flutter_secure_storage](flutter/flutter_secure_storage.md)
        * [flutter_slidable](flutter/flutter_slidable.md)
+       * [environment value](flutter/environment_value.md)
    * [Input](flutter/input.md)
 * [React](react/README.md)
    * [Static html](react/static_html.md)

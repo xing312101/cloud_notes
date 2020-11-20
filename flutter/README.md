@@ -5,6 +5,8 @@
 
 > https://book.flutterchina.club
 
+> https://www.mdeditor.tw/pl/pUFP/zh-tw # about build version
+
 ## Notice
 install dart first
 
