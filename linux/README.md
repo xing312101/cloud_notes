@@ -30,3 +30,5 @@ getconf LONG_BIT 查32bit或64bit
    # ls /home
    # passed username
 ```
+
+
