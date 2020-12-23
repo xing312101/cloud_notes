@@ -7,6 +7,10 @@
 
 > Flutter Provider: FutureProvider StreamProvider
 
+> InheritedWidget: https://jonny-huang.github.io/flutter/flutter_004/
+
+
+
 ## in pubspec.yml
 ```
 dependencies:

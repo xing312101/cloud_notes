@@ -14,8 +14,10 @@ install dart first
 > https://github.com/leoafarias/fvm
 
 ```
-npm install -g fvm
-fvm 1.7.8
+$ npm install -g fvm
+$ fvm 1.7.8+hotfix.4
+$ fvm 1.22.4
+
 ```
 FVM 是將 ~/flutter 設定link到想要的version上，所以多個project不同version就需要做切換
 

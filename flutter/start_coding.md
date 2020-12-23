@@ -20,6 +20,16 @@ inspect(object)
 debug(print)
 ```
 
+## debug UI
+```
+import 'package:flutter/rendering.dart';
+
+void main() {
+  debugPaintSizeEnabled = true;
+  runApp(MyApp());
+}
+```
+
 ## basic widget
 ```
 // can not change ui
