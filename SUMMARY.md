@@ -151,4 +151,5 @@
    * [plugins](gitbook/plugins.md)
 * [Redux](redux/README.md)
 * [Maximo](maximo/README.md)
+* [Words](words/README)
 
