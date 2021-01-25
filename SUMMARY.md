@@ -31,6 +31,7 @@
        * [DateTime Picker](flutter/datetime_picker.md)
    * [tab](flutter/tab.md)
    * [layout](flutter/layout.md)
+   * [Dialog](flutter/dialog.md)
 * [React](react/README.md)
    * [Static html](react/static_html.md)
    * [React.js](react/reactjs.md)
@@ -152,4 +153,5 @@
 * [Redux](redux/README.md)
 * [Maximo](maximo/README.md)
 * [Words](words/README)
+* [Machine Learning](machine_learning/README.md)
 
