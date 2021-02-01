@@ -44,6 +44,35 @@ class ProviderName with ChangeNotifier {
     Provider.of<ProviderName>(context).updateVal(val.text);
 ```
 
+## init at main app
+```
+class MainApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => AuthTokenProvider()),
+          // ChangeNotifierProvider.value(value: AuthTokenProvider()),
+        ],
+
+        child: MaterialApp(
+          title: 'sample App',
+          initialRoute: '/',
+          onGenerateRoute: AppRoute.onGenerateRoute,
+          onUnknownRoute: AppRoute.onUnknownRoute,
+        )
+    );
+  }
+}
+
+anotherFunction(){
+    AuthTokenProvider()
+}
+
+
+```
+
+
 ## Consumer Widget
 > 局部監聽, 避免整個Widget都重新render
 

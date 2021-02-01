@@ -80,3 +80,21 @@ RadioListTile(
   selected: true,
 )
 ```
+
+
+## Checkbox
+> https://api.flutter.dev/flutter/material/Checkbox-class.html
+
+> https://api.flutter.dev/flutter/material/CheckboxListTile-class.html
+
+```
+Checkbox(
+    value: widget.values[index].selected,
+    onChanged: (value) {
+      setState(() {
+        widget.values[index].selected = !widget.values[index].selected;
+      });
+    }),
+)
+
+```
