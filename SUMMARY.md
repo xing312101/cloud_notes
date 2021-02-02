@@ -154,4 +154,5 @@
 * [Maximo](maximo/README.md)
 * [Words](words/README)
 * [Machine Learning](machine_learning/README.md)
+* [Echarts Apache](echarts_apache/README.md)
 
