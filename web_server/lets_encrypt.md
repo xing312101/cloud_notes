@@ -113,7 +113,10 @@ $ sudo crontab -e
 ```
 
 
-
+## Delete Certbot Certificate by Domain Name
+```
+sudo certbot delete --cert-name www.domain.com
+```
 
 
 
