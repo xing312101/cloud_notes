@@ -253,4 +253,27 @@ IF (
 
 ```
 
+## 10. rank category by count
+```
+RANK =
+VAR _TMP_TABLE = SUMMARIZE(ALL(TABLE_A), TABLE_A[COLUMN_1], "_NEW_COUNT", COUNT(TABLE_A[COLUMN_1]))
+RETURN MAXX(FILTER(_TMP_TABLE, [COLUMN_1] = SELECTEDALUE(TABLE_A[COLUMN_1])), RANKX(_TMP_TABLE, [_NEW_COUNT]))
+
+```
+```
+RANK =
+VAR _CURRENT_COUNT = [count_b]
+RETURN CALCULATE(
+    RANKX(
+        VALUES(TABLE_A[COLUMN_1]),
+        CALCULATE(
+            COUNT(TABLE_A[COLUMN_1])
+        ),
+        _CURRENT_COUNT,
+        DESC
+    ),
+    ALLSELECTED(TABLE_A)
+)
+
+```
 
