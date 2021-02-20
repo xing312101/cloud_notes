@@ -8,6 +8,11 @@
 C:\Android
 ```
 
+#### ANDROID_SDK_ROOT:
+```
+C:\Android\sdk\Android
+```
+
 #### PATH:
 ```
 C:\dart-sdk\bin
@@ -47,4 +52,31 @@ Need to check the version of plugins and android studio
 
 #### Flutter
 > https://plugins.jetbrains.com/plugin/9212-flutter
+
+## Gradle
+> https://gradle.org/releases/
+
+> offline files of Gradle  are copied from another computer which has build apk success.
+
+```
+Offline
+# gradle-wrapper.properties
+## flutter project: android\gradle\wrapper\gradle-wrapper.properties
+distributionUrl=file:///c:/x/install/gradle-4.10.2-all.zip
+
+# .gradle directory
+## defulat path C:\Users\{{Administrator}}\.gradle
+copy file to this path
+
+## environment name
+GRADLE_USER_HOME
+
+
+```
+
+## Intel Hardware Accelerated Execution Manager (HAXM)
+> https://github.com/intel/haxm
+
+
+
 

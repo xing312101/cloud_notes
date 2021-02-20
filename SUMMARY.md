@@ -33,6 +33,7 @@
    * [layout](flutter/layout.md)
    * [Dialog](flutter/dialog.md)
    * [Install](flutter/install.md)
+   * [state builder](flutter/state_builder.md)
 * [React](react/README.md)
    * [Static html](react/static_html.md)
    * [React.js](react/reactjs.md)
@@ -153,7 +154,7 @@
    * [plugins](gitbook/plugins.md)
 * [Redux](redux/README.md)
 * [Maximo](maximo/README.md)
-* [Words](words/README)
+* [Words](words/README.md)
 * [Machine Learning](machine_learning/README.md)
 * [Echarts Apache](echarts_apache/README.md)
 
