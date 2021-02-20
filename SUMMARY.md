@@ -32,6 +32,7 @@
    * [tab](flutter/tab.md)
    * [layout](flutter/layout.md)
    * [Dialog](flutter/dialog.md)
+   * [Install](flutter/install.md)
 * [React](react/README.md)
    * [Static html](react/static_html.md)
    * [React.js](react/reactjs.md)
