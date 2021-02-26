@@ -277,3 +277,11 @@ RETURN CALCULATE(
 
 ```
 
+## countrow Row Number
+```
+Row_Number =
+CALCULATE (
+    COUNTROWS(Profit_Table),
+    FILTER ( ALLSELECTED ( Profit_Table ), Profit_Table[Position] <= MAX ( Profit_Table[Position]) )
+)
+```
