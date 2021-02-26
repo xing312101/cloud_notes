@@ -28,6 +28,7 @@
        * [flutter_form_builder](flutter/flutter_form_builder.md)
        * [date_time_picker](flutter/date_time_picker.md)
        * [get device info](flutter/get_device_info.md)
+       * [http](flutter/http.md)
    * [Input](flutter/input.md)
        * [DateTime Picker](flutter/datetime_picker.md)
    * [tab](flutter/tab.md)
