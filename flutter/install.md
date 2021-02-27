@@ -1,6 +1,17 @@
 # Install
 > for Windows offline
 
+## Android Studio
+```
+prefer Android Studio 3.5.3
+In order to set gradle offline mode easyily
+```
+
+## [!] Android Studio (not installed)
+```
+flutter config --android-studio-dir="C:\Program Files\Android\Android Studio"
+```
+
 ## Environment Variable (example)
 
 #### ANDROID_HOME:
@@ -78,5 +89,76 @@ GRADLE_USER_HOME
 > https://github.com/intel/haxm
 
 
+
+
+# Summary
+```
+1. 環境變數
+
+ANDROID_SDK_ROOT => C:\Android\sdk\Android
+
+GRADLE_USER_HOME => C:\.gradle
+
+PATH (add) => C:\flutter\bin
+
+PATH (add) => C:\dart-sdk\bin
+
+
+
+2. Gradle
+
+unzip gradle_20210227c.7z to C:\.gradle
+
+put gradle-4.10.2-all at global place. ex: d:\
+
+
+
+3. Android SDK
+
+unzip Android.7z to C:\Android
+
+
+
+4. Dart SDK
+
+unzip dartsdk-windows-x64-release.zip to c:\dart-sdk
+
+
+
+5. Flutter SDK
+
+unzip flutter.7z to C:\flutter
+
+
+
+6. Android studio
+
+=> "Build, Execution, Deployment" > "Build Tool > Gradle"
+
+Set gradle is offline mode
+
+Set gradle path is c:\.gradle
+
+
+
+=> "Appearance & Behavior > System Settings > Android SDK"
+
+Set SDK Path is C:\Android\sdk\Android
+
+
+
+=> Plugins
+
+import Dart-191.8593.zip
+
+import flutter-intellij.zip
+
+7. Project code
+修改android\gradle\wrapper\gradle-wrapper.properties當中的distributionUrl
+
+依照檔案位置做調整
+distributionUrl=file:///c:/xxxPath/gradle-4.10.2-all.zip
+
+```
 
 
