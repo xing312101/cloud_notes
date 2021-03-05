@@ -134,6 +134,7 @@
 * [Oracle](oracle/README.md)
    * [Oracle Client](oracle/oracle_client.md)
 * [Power BI](power_bi/README.md)
+   * [Streaming API](power_bi/streaming_api.md)
 * [Web Server](web_server/README.md)
    * [SSL](web_server/ssl.md)
        * [let's Encrypt](web_server/lets_encrypt.md)
@@ -161,4 +162,5 @@
 * [Words](words/README.md)
 * [Machine Learning](machine_learning/README.md)
 * [Echarts Apache](echarts_apache/README.md)
+* [Docker](docker/README.md)
 
