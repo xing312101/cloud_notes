@@ -107,6 +107,7 @@
 * [JQuery](jquery/README.md)
 * [Javascript](javascript/README.md)
    * [Plugins](javascript/plugins.md)
+   * [stop event](javascript/stop_event.md)
 * [Linux](linux/README.md)
    * [proc](linux/proc.md)
        * [CPU](linux/cpu.md)
@@ -163,4 +164,5 @@
 * [Machine Learning](machine_learning/README.md)
 * [Echarts Apache](echarts_apache/README.md)
 * [Docker](docker/README.md)
+* [Java](java/README.md)
 
