@@ -38,6 +38,7 @@
    * [Dialog](flutter/dialog.md)
    * [Install](flutter/install.md)
    * [state builder](flutter/state_builder.md)
+   * [Http api methods](flutter/http_api_methods.md)
 * [React](react/README.md)
    * [Static html](react/static_html.md)
    * [React.js](react/reactjs.md)
