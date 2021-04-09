@@ -39,6 +39,7 @@
    * [Install](flutter/install.md)
    * [state builder](flutter/state_builder.md)
    * [Http api methods](flutter/http_api_methods.md)
+   * [Unit Test](flutter/unit_test.md)
 * [React](react/README.md)
    * [Static html](react/static_html.md)
    * [React.js](react/reactjs.md)
