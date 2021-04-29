@@ -1,6 +1,4 @@
-# Java
-
-## Regular Expression
+# Regular Expression
 > https://openhome.cc/Gossip/Regex/MatcherJava.html
 
 ### Pattern

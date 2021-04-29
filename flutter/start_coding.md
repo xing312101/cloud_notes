@@ -166,7 +166,11 @@ UserAccountsDrawerHeader
 * Text
 
 
+## after build
+> https://medium.com/flutterworld/flutter-schedulerbinding-vs-widgetsbinding-149c71cb607f
 ````
 WidgetsBinding.instance.addPostFrameCallback
 WidgetsBinding.instance.addPersistentFrameCallback
 ````
+
+vv

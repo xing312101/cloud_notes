@@ -167,4 +167,7 @@
 * [Echarts Apache](echarts_apache/README.md)
 * [Docker](docker/README.md)
 * [Java](java/README.md)
+   * [File IO](java/file_io.md)
+   * [Regular Expression](java/regular_expression.md)
+   * [json](java/json.md)
 
