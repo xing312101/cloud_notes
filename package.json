@@ -17,7 +17,7 @@
     "gitbook-cli": "^2.3.2",
     "gitbook-plugin-chapter-fold": "0.0.4",
     "gitbook-plugin-search-plus-mod": "^1.0.6",
-    "lodash": "^4.17.19"
+    "lodash": "^4.17.21"
   },
   "scripts": {
     "gitbook-build": "gitbook build",
