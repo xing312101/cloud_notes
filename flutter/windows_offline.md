@@ -1,5 +1,4 @@
-# Install
-> for Windows offline
+# windows offline
 
 ## Android Studio
 ```

@@ -76,4 +76,16 @@ anotherFunction(){
 ## Consumer Widget
 > 局部監聽, 避免整個Widget都重新render
 
-
+```
+return Consumer<CartModel>(
+  builder: (context, cart, child) => Stack(
+        children: [
+          // Use SomeExpensiveWidget here, without rebuilding every time.
+          if (child != null) child,
+          Text("Total price: ${cart.totalPrice}"),
+        ],
+      ),
+  // Build the expensive widget here.
+  child: SomeExpensiveWidget(),
+);
+```
