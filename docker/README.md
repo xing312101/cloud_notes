@@ -26,8 +26,13 @@ $ sudo docker-compose -f docker.ymal -p projectName stop
 $ sudo docker-compose -f docker.ymal -p projectName start
 
 ### Remove containers
-$ sudo docker-compose -f docker.ymal -p projectName down -v
+$ sudo docker-compose -f docker.ymal -p projectName rm -v
 
 ### Remove containers and all associated images
-$ sudo docker-compose -f docker.ymal -p projectName --rmi all -v
+$ sudo docker-compose -f docker.ymal -p projectName down -v
 
+
+```
+"docker-compose down": stop and remove the container with all the networks (but not volumes), you should add -v option to do that.
+"docker-compose rm": remove stopped only containers, but not running containers, you should add option -s to be able to remove running containers
+```
