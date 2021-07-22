@@ -167,6 +167,7 @@
    * [plugins](gitbook/plugins.md)
 * [Redux](redux/README.md)
 * [Maximo](maximo/README.md)
+   * [vscode](maximo/vscode.md)
 * [Words](words/README.md)
 * [Machine Learning](machine_learning/README.md)
 * [Echarts Apache](echarts_apache/README.md)
