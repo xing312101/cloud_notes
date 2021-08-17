@@ -45,7 +45,7 @@ dev_dependencies:
     }
   }
 ```
-#### test
+####  mock test
 ```
 @GenerateMocks([http.Client])
 void main() {
@@ -62,3 +62,56 @@ void main() {
   });
 }
 ```
+
+## Widget testing
+> https://flutter.dev/docs/cookbook/testing/widget
+
+```
+testWidgets('Hello test widget', (WidgetTester tester) async {
+    // await tester.pumpWidget(WidgetNameOrBuild);
+    await tester.pumpWidget(HelloWidget());
+    await tester.pumpWidget(
+        MaterialApp(
+            home: Material(
+                child: Builder(
+                    builder: (BuildContext context) {
+                        return Container();
+                    },
+                ),
+            ),
+        )
+    );
+
+});
+```
+
+### finder
+```
+final textFinder = find.text('textString');
+final textFinder = find.byKey(Key('keyId'));
+
+```
+
+### enterText, tap, drag
+```
+testWidgets('...', (WidgetTester tester) async {
+  // enterText
+  await tester.pumpWidget(HelloWidget());
+  await tester.enterText(find.byType(TextField), 'hello');
+
+  // tap
+  await tester.tap(find.byType(FloatingActionButton));
+  await tester.pump(); // rebuild
+  // Expect to find the item on screen.
+
+  // drag
+  // Swipe the item to dismiss it.
+  await tester.drag(find.byType(Dismissible), const Offset(500.0, 0.0));
+  await tester.pumpAndSettle();
+
+});
+```
+
+
+
+
