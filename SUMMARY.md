@@ -16,6 +16,7 @@
    * [Dart](flutter/dart.md)
    * [Start Coding](flutter/start_coding.md)
    * [Router](flutter/router.md)
+   * [Package](flutter/package.md)
    * [Plugins](flutter/plugins.md)
        * [useful-libraries](flutter/useful-libraries.md)
        * [Provider](flutter/provider.md)

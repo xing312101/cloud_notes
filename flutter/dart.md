@@ -20,3 +20,14 @@
 ```
 m.containsKey(k)
 ```
+
+#### putIfAbsent
+> https://api.dart.dev/stable/2.13.4/dart-core/Map/putIfAbsent.html
+
+```
+Map _instances = {}
+_instances.putIfAbsent(key, () => new MyClass());
+
+```
+
+
