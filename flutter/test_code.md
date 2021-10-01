@@ -29,6 +29,8 @@ dev_dependencies:
   build_runner: <newest_version>
 ```
 
+
+
 #### code
 ```
   Future fetchData(http.Client client) async {
@@ -45,6 +47,22 @@ dev_dependencies:
     }
   }
 ```
+
+#### generate the mock
+```
+import 'package:mockito/annotations.dart';
+
+// Generate a MockClient using the Mockito package.
+// Create new instances of this class in each test.
+@GenerateMocks([MockClassName])
+void main() {
+}
+
+$  flutter pub run build_runner build
+
+```
+
+
 ####  mock test
 ```
 @GenerateMocks([http.Client])
