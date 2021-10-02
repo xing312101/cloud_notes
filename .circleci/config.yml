@@ -39,7 +39,7 @@ jobs:
       - run: ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
       - add_ssh_keys:
           fingerprints:
-            - "cf:81:28:f9:39:fd:66:b0:a1:0a:e8:60:bd:64:e6:3c"
+            - "4e:3c:c9:8b:f1:9f:95:dd:d0:d4:b7:bb:73:e1:6d:c0"
       - run:
           name: "Prepare enviroment"
           command: |
@@ -54,9 +54,9 @@ workflows:
       - build
       - deploy:
           requires:
-            - build    
+            - build
           filters:
             branches:
-              only: 
+              only:
                 - master
                 - react
