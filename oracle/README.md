@@ -60,3 +60,6 @@ query << "users.id in (#{user_ids_of_1000.join(',')})"
 end
 filter_query = query.join(' or ')
 ```
+
+
+## 
