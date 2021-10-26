@@ -1,5 +1,10 @@
 # EnvironmentConfig
 
+## run with parameter
+```
+flutter run --dart-define=ENVIRONMENT=STAGING
+```
+
 ## assets/config/server.json
 ```
 {

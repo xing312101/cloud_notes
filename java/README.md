@@ -11,3 +11,10 @@ var matcher = pattern.matcher("abcd");
 matcher.find()
 ```
 
+## JAR EAR
+
+```
+jar xf “file.name.jar” => 解壓
+jar uf “file.name.final.jar” “file.name.class”
+
+```
