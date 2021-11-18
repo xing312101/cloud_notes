@@ -179,6 +179,8 @@
 * [Maximo](maximo/README.md)
    * [vscode](maximo/vscode.md)
    * [PM](maximo/pm.md)
+   * [setting](maximo/setting.md)
+   * [coding](maximo/coding.md)
 * [Words](words/README.md)
 * [Machine Learning](machine_learning/README.md)
 * [Echarts Apache](echarts_apache/README.md)
