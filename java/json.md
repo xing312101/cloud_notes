@@ -1,5 +1,10 @@
 # json
 
+## JSON-java
+> https://stleary.github.io/JSON-java
+> https://github.com/stleary/JSON-java
+
+
 ```
 Map<String,Object> map = new HashMap<String,Object>();
 
@@ -14,3 +19,12 @@ JSONObject json = new JSONObject(map);
 
 ```
 
+
+## parsing Datetime
+```
+SimpleDateFormat dateParser = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+if (!dataObj.isNull("key")) {
+  String tString = dataObj.get("tString").toString();
+  dateParser.parse(tString);
+}
+```
