@@ -56,3 +56,112 @@ $ flutter config --enable-web
 $ flutter pub get
 ```
 
+
+
+## Adding a launcher icon
+> https://pub.dev/packages/flutter_launcher_icons
+
+### pubspec.yaml
+```
+dev_dependencies:
+  flutter_launcher_icons: "^0.9.2"
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
+
+```
+### run
+```
+flutter pub run flutter_launcher_icons:main
+```
+
+## Android release build
+> https://docs.flutter.dev/deployment/android
+
+
+### Create an upload keystore
+```
+On Mac/Linux, use the following command:
+  keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+
+On Windows, use the following command:
+  keytool -genkey -v -keystore c:\Users\USER_NAME\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+```
+
+### [project]/android/key.properties
+```
+storePassword=<password from previous step>
+keyPassword=<password from previous step>
+keyAlias=upload
+storeFile=<location of the key store file, such as /Users/<user name>/upload-keystore.jks>
+```
+
+### Proguard Rule
+```
+## Flutter wrapper
+-keep class io.flutter.app.** { *; }
+-keep class io.flutter.plugin.**  { *; }
+-keep class io.flutter.util.**  { *; }
+-keep class io.flutter.view.**  { *; }
+-keep class io.flutter.**  { *; }
+-keep class io.flutter.plugins.**  { *; }
+-dontwarn io.flutter.embedding.**
+```
+
+### Configure signing in gradle
+at [project]/android/app/build.gradle
+
+#### Add the keystore information
+```
+   def keystoreProperties = new Properties()
+   def keystorePropertiesFile = rootProject.file('key.properties')
+   if (keystorePropertiesFile.exists()) {
+       keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+   }
+
+   android {
+         ...
+   }
+
+```
+
+#### buildTypes
+```
+signingConfigs {
+    release {
+        keyAlias keystoreProperties['keyAlias']
+        keyPassword keystoreProperties['keyPassword']
+        storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+        storePassword keystoreProperties['storePassword']
+    }
+}
+
+buildTypes {
+    debug {
+        signingConfig signingConfigs.debug
+        minifyEnabled false
+        useProguard true
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+
+    release {
+        signingConfig signingConfigs.release
+        useProguard true
+        shrinkResources true
+        minifyEnabled true
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
