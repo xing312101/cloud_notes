@@ -11,3 +11,10 @@ Uint8List tmp = await xFile.readAsBytes();
 String s = String.fromCharCodes(tmp);
 Uint8List.fromList(s.codeUnits);
 ```
+
+## file base64
+```
+Uint8List tmp = await xFile.readAsBytes();
+String s = base64Encode(tmp);
+base64Decode(s);
+```
