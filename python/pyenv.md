@@ -1,6 +1,8 @@
 # pyenv
 > reference: https://github.com/pyenv/pyenv
 
+> https://realpython.com/intro-to-pyenv/
+
 > commands: https://github.com/pyenv/pyenv/blob/master/COMMANDS.md
 
 ## prepare environment
@@ -47,5 +49,26 @@ reference: https://github.com/pyenv/pyenv/wiki
 $ pyenv install 2.7.8
 ```
 
+## pyenv-virtualenv
+```
+brew install pyenv-virtualenv
+```
 
+## Usage
+> https://realpython.com/intro-to-pyenv/
+
+```
+pyenv local $version
+pyenv which python
+pyenv which pip
+
+if the version not change, run below method or restart terminal:
+$ pyenv activate <environment_name>
+$ pyenv deactivate
+
+by name not python version number
+$ pyenv virtualenv 3.6.8 projectName
+$ pyenv local projectName
+$ python -V
+```
 

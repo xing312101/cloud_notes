@@ -14,24 +14,6 @@ pip install tf-nightly
 
 ```
 
-
-## Python 虛擬環境來獨立安裝套件，與系統區隔開來
-
-```
-1. create virtual environment
-$ python3 -m venv --system-site-packages ./venv
-
-2. using the environment
-$ source ./venv/bin/activate
-
-3. upgrate pip in venv
-$ pip install --upgrade pip
-$ pip list
-
-4. if you would exit venv(option)
-$ deactivate
-```
-
 ## 安裝 TensorFlow pip 套件
 > https://stackoverflow.com/questions/47068709/your-cpu-supports-instructions-that-this-tensorflow-binary-was-not-compiled-to-u
 
