@@ -13,6 +13,8 @@ install dart first
 ## Version Control
 > https://github.com/leoafarias/fvm
 
+> https://fvm.app/
+
 ```
 $ pub global activate fvm
 $ fvm install v1.7.8+hotfix.4
@@ -24,11 +26,6 @@ global
 $ fvm use <version> --global
 
 ```
-
-
-FVM 是將 ~/flutter 設定link到想要的version上，所以多個project不同version就需要做切換
-
-IDE設定flutter path設定在 ~/flutter 上即可
 
 ## Flutter's build modes
 > https://flutter.dev/docs/testing/build-modes
@@ -99,6 +96,8 @@ storeFile=<location of the key store file, such as /Users/<user name>/upload-key
 ```
 
 ### Proguard Rule
+> android/app/proguard-rules.pro
+
 ```
 ## Flutter wrapper
 -keep class io.flutter.app.** { *; }

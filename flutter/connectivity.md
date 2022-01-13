@@ -1,6 +1,8 @@
 # connectivity
 > https://pub.dev/packages/connectivity
 
+> https://pub.dev/packages/connectivity_plus
+
 ```
 var connectivityResult = await (Connectivity().checkConnectivity());
 if (connectivityResult == ConnectivityResult.mobile) {
